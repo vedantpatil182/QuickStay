@@ -1,0 +1,12 @@
+{
+    "name": "quickstay-fullstack",
+    "version": "1.0.0",
+    "type": "module",
+    "scripts": {
+        "dev": "npx concurrently \"npm run dev --prefix client\" \"npm run server --prefix server\"",
+        "install-all": "npm install --prefix client && npm install --prefix server"
+    },
+    "devDependencies": {
+        "concurrently": "^8.2.2"
+    }
+}
