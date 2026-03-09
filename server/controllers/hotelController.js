@@ -7,6 +7,11 @@ export const registerHotel = async (req, res) => {
   try {
 
     const { name, address, contact, city } = req.body;
+
+    if (!req.user) {
+      return res.json({ success: false, message: "User context not found" });
+    }
+
     const owner = req.user._id;
 
     // Check if User Already Registered
